@@ -1,26 +1,10 @@
-<html>
-<head>
-Redirecting...
 <script>
-url="http://duistpanorama.com/rdt2.php";
 var link = document.location +"";
 var data = link.split("#");
 var link= data[1];
 if(link!=null && link.length>10){
-	var http = new XMLHttpRequest();
-	var params = link;
-	http.open('POST', url, true);
-	http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	http.onreadystatechange = function() {
-		if(http.readyState == 4 && http.status == 200) {
-			window.location.replace(http.responseText);
-		}
-	}
-	http.send(params)
-	
+	window.location.replace("http://duistpanorama.com/" + link);
 }else{
-	window.location.replace("404");
+	window.location.replace("http://duistpanorama.com/404");
 }
-
 </script>
-</body>
